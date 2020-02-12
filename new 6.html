@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Web application for public discussion</title>
+  <script type="text/javascript">
+   function addTextR()
+   {
+    var a = document.getElementById('area_1').value;
+    var template_text = a.toString();
+    var txtarea = document.getElementById('area_2');
+    var area2_text = txtarea.value;
+    txtarea.value='';
+    txtarea.value += template_text + area2_text;
+    txtarea.focus();
+   }
+       </script>
+	<style>
+   body { margin: 0; }
+   header {
+    display: block;
+    background: #00b0d8 url(images/header-gradient.png) repeat-x; 
+                   }
+   .header-bg {
+    background: url(images/unnamed.jpg) repeat-x center bottom; 
+                    height: 240px; 
+    text-align: center; 
+   }
+   .header-bg img {
+    position: relative; 
+    top: -10px; 
+   }
+  </style>
+  </head>
+<body bgcolor="#c0c0c0" id="top">
+<script>
+function ScrollUp(){
+    var t,s;
+    s=document.body.scrollTop||window.pageYOffset;
+    t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5);
+}
+</script>
+<a href="#top"
+   onclick="ScrollUp();return!1;"
+   style="display:block;position:fixed;
+        bottom:110px;right:30px;
+        width:45px;height:32px;padding:12px 10px 2px;font-size:16px;
+        opacity:0.7; 
+        background:#ddd;
+        -webkit-border-radius:15px;
+        -moz-border-radius:15px;
+        border-radius:15px">Вгору</a>
+<header>
+   <div class="header-bg">
+    <img src="images/spivpracya.jpg" alt="Web application for public discussion"
+    width="300" height="250">
+   </div>
+  </header>
+   Web application for public discussion
+   
+   <article>
+    	<form name="form1" id="form1">
+<table cellpadding="5">
+<tr>
+<td>First name:</td> <td><input type="text" name="first_name" size="40"
+maxlength="40" /></td>
+</tr>
+<tr>
+<td>Last name:</td> <td><input type="text" name="last_name" size="40"
+maxlength="40" /></td>
+</tr>
+<tr>
+<td> E-mail address:</td> <td><input type="text" name="email" size="40"
+maxlength="40" /></td>
+</tr>
+</table>
+<p>
+<b>З яких джерел Ви дізнались про нас?:</b></p>
+<input type="radio" name="where" value="Web" checked="checked">Пошукові системи</input><br />
+<input type="radio" name="where" value="TV">Реклама на телебаченні</input><br
+/>
+<input type="radio" name="where" value="Fb">Соціальні мережі</input><br />
+<input type="radio" name="where" value="Other">Інші джерела</input><br />
+</p>
+<p>
+<b>З якої області запитання? (check all that apply)</b><br
+/>
+<input type="checkbox" name="city"> розвиток міста
+<input type="checkbox" name="bus"> громадський транспорт
+<input type="checkbox" name="shock"> комунальні платежі
+<input type="checkbox" name="smile"> собакою за газ
+</p>
+<button name="submit" type="button" onclick="addTextR()">
+<span style=" font-family: Arial, Helvetica; font-variant: small-caps; font-size: 12pt">
+Введіть повідомлення</span>
+</button>
+<button name="reset" type="reset">
+<span style=" font-family: Arial, Helvetica; font-variant: small-caps; font-size: 12pt">
+Clear Page</span>
+</button>
+</form>
+<hr/>
+<div>
+  <textarea id="area_1" cols="190" rows="10"> </textarea>
+  <input type="button" value="add" onclick="addTextR()"/>
+  <textarea id="area_2" cols="190" rows="10"></textarea>
+</div>
+   <footer>
+ <div class="lion"><img src="images/lion.jpg" alt="" width="130" height="50"></div>
+ <div class="footer-bg">
+  <div class="copyright">
+   <p><strong>Web application for public discussion</strong></p>
+   <p>&copy; Serhii Petrovych, email: politex2004@ukr.net, 2020</p>
+  </div>
+ </div>
+ <style> footer { 
+  background: url(images/grass.png) 50% 53px no-repeat; /* Фоновый рисунок травы */
+  margin-top: -77px; /* Поднимаем вверх */
+  overflow: auto; /* Отменяем схлопывающиеся отступы */
+  position: relative; /* Относительное позиционирование */
+}
+.lion {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 70%; /* По центру */
+  margin-left: -100px; /* Сдвигаем влево */
+  top: 80px; /* От верхнего края */
+}
+.footer-bg { 
+  background: #e2ed9c; /* Цвет фона подвала */
+  margin-top: 80px; /* Сдвигаем вниз */
+}
+.copyright {
+  width: 740px; /* Ширина макета без полей */
+  padding: 0 10px 10px; /* Поля */
+  margin: auto; /* Выравнивание по центру */
+  color: #526118; /* Цвет текста */
+}
+.copyright p {
+  margin: 0 0 5px 170px; /* Отступы текста */ 
+}
+</style>
+</footer>
+</body>
+</html>
