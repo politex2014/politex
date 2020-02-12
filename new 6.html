@@ -20,10 +20,10 @@
    body { margin: 0; }
    header {
     display: block;
-    background: #00b0d8 url(images/header-gradient.png) repeat-x; 
+    background: #00b0d8 repeat-x; 
                    }
    .header-bg {
-    background: url(images/unnamed.jpg) repeat-x center bottom; 
+    background: url(unnamed.jpg) repeat-x center bottom; 
                     height: 240px; 
     text-align: center; 
    }
@@ -31,7 +31,7 @@
     position: relative; 
     top: -10px; 
    }
-  </style>
+   </style>
   </head>
 <body bgcolor="#c0c0c0" id="top">
 <script>
@@ -41,6 +41,13 @@ function ScrollUp(){
     t=setInterval(function(){if(s>0)window.scroll(0,s-=5);else clearInterval(t)},5);
 }
 </script>
+<script type='text/javascript'>
+var count=0;
+function inc(N) {
+    count+=N;
+    console.log (count);
+		};
+		</script>
 <a href="#top"
    onclick="ScrollUp();return!1;"
    style="display:block;position:fixed;
@@ -53,7 +60,7 @@ function ScrollUp(){
         border-radius:15px">Вгору</a>
 <header>
    <div class="header-bg">
-    <img src="images/spivpracya.jpg" alt="Web application for public discussion"
+    <img src="spivpracya.jpg" alt="Web application for public discussion"
     width="300" height="250">
    </div>
   </header>
@@ -91,7 +98,7 @@ maxlength="40" /></td>
 <input type="checkbox" name="shock"> комунальні платежі
 <input type="checkbox" name="smile"> собакою за газ
 </p>
-<button name="submit" type="button" onclick="addTextR()">
+<button name="submit" type="button" onclick="addTextR();inc(1);">
 <span style=" font-family: Arial, Helvetica; font-variant: small-caps; font-size: 12pt">
 Введіть повідомлення</span>
 </button>
@@ -107,37 +114,33 @@ Clear Page</span>
   <textarea id="area_2" cols="190" rows="10"></textarea>
 </div>
    <footer>
- <div class="lion"><img src="images/lion.jpg" alt="" width="130" height="50"></div>
- <div class="footer-bg">
+  <div class="footer-bg">
   <div class="copyright">
    <p><strong>Web application for public discussion</strong></p>
    <p>&copy; Serhii Petrovych, email: politex2004@ukr.net, 2020</p>
   </div>
  </div>
  <style> footer { 
-  background: url(images/grass.png) 50% 53px no-repeat; /* Фоновый рисунок травы */
-  margin-top: -77px; /* Поднимаем вверх */
-  overflow: auto; /* Отменяем схлопывающиеся отступы */
-  position: relative; /* Относительное позиционирование */
+   
 }
 .lion {
-  position: absolute; /* Абсолютное позиционирование */
-  left: 70%; /* По центру */
-  margin-left: -100px; /* Сдвигаем влево */
-  top: 80px; /* От верхнего края */
+  position: absolute; 
+  left: 70%; 
+  margin-left: -100px; 
+  top: 80px; 
 }
 .footer-bg { 
-  background: #e2ed9c; /* Цвет фона подвала */
-  margin-top: 80px; /* Сдвигаем вниз */
+  background: #e2ed9c; 
+  margin-top: 80px; 
 }
 .copyright {
-  width: 740px; /* Ширина макета без полей */
-  padding: 0 10px 10px; /* Поля */
-  margin: auto; /* Выравнивание по центру */
-  color: #526118; /* Цвет текста */
+  width: 740px; 
+  padding: 0 10px 10px; 
+  margin: auto; 
+  color: #526118; 
 }
 .copyright p {
-  margin: 0 0 5px 170px; /* Отступы текста */ 
+  margin: 0 0 5px 170px;  
 }
 </style>
 </footer>
